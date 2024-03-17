@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #0a3871;
+  --secondary-color: #FFFFFF;
+  --text-color: #343a40;
+  --light-text-color: #495057;
+  --white-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+
+}
+
+textarea {
+  resize: none;
+  border: 0 none;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+textarea:focus {
+  outline: none;
+}
+
+button {
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 400;
+  font-size: 0.8125rem;
+  width: 11rem;
+  height: 2.2rem;
+}
+
+button:hover {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  transition: 0.2s;
+}
+
+.activedButton {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--secondary-color);
+}
+
+.header {
+  flex-basis: auto;
+  padding: 2rem 0 0 2.5rem;
+  position: absolute;
+}
+
+.header--logo {
+  width: 6rem;
+  height: 2.2rem;
+}
+
+.mainContent {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.mainContent--content {
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+}
+
+.mainContent--content > textarea {
+  font-size: 1.2rem;
+}
+
+.mainContent--content-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mainContent--content-footer-caption {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
+.mainContent--content-footer-buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.mainContent--content-footer-buttons > button {
+  width: 15rem;
+}
+
+.mainContent--aside {
+  width: 14rem;
+  min-height: 34rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  border-radius: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.mainContent--aside > textarea {
+  background-color: var(--white-color);
+  font-size: 0.9rem;
+}
+
+.mainContent--aside-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.mainContent--aside-caption > h2 {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.8rem;
+}
+
+.mainContent--aside-caption > p {
+  font-weight: 400;
+  font-size: 0.6875rem;
+  color: var(--light-text-color);
+  line-height: 1.5rem;
+}
+
+.footer {
+  flex-basis: auto;
+  padding: 0.6rem;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 0.98rem;
+  gap: 1rem;
+}
+
+.footer_linkedIn {
+  flex-basis: auto;
+  padding: 0.6rem;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 0.98rem;
+  gap: 1rem;
+}
+/* Responsive styles */
+
+@media (max-width: 768px) {
+  .container {
+    gap: 0.5rem;
+  }
+
+  .header {
+    position: static;
+    padding: 2rem 0 3rem 0;
+  }
+
+  .mainContent {
+    gap: 1.2rem;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .mainContent--content {
+    width: 100%;
+  }
+
+  .mainContent--content > textarea {
+    font-size: 1.7rem;
+    min-height: 10rem;
+  }
+
+  .mainContent--content-footer-caption > p {
+    font-size: 1rem;
+  }
+
+  .mainContent--content-footer-buttons {
+    gap: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .mainContent--content-footer-buttons > button {
+    width: 15rem;
+  }
+
+  .mainContent--aside {
+    width: 100%;
+    gap: 1.5rem;
+    min-height: 4rem;
+  }
+
+  .mainContent--aside-img {
+    display: none;
+  }
+
+  .mainContent--aside > textarea {
+    background-color: var(--white-color);
+    font-size: 0.9rem;
+  }
+
+  .mainContent--aside > button {
+    width: auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    gap: 1.5rem;
+  }
+
+  .header {
+    position: static;
+    padding: 2rem 0 3rem 0;
+  }
+
+  .mainContent--content {
+    gap: 5rem;
+  }
+
+  .mainContent--content > textarea {
+    font-size: 1.3rem;
+    min-height: 15rem;
+  }
+
+  .mainContent--content-footer-caption > p {
+    font-size: 0.7rem;
+  }
+
+  .mainContent--content-footer-buttons {
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mainContent--content-footer-buttons > button {
+    width: 15rem;
+  }
+
+  .mainContent--aside {
+    gap: 0.5rem;
+    min-height: 10rem;
+  }
+
+  .mainContent--aside-img {
+    display: none;
+  }
+
+  .mainContent--aside > textarea {
+    background-color: var(--white-color);
+    font-size: 0.9rem;
+  }
+}
+.sinaldeatencao{
+  width:  1rem;
+  height: 1rem;
+  text-align: center;
+}
+
+.logoLinkedIn img{
+  width:  4rem;
+  height: 1rem;
+  text-align: center;
+}
+
+

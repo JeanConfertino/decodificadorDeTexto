@@ -1,0 +1,50 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Desafio Alura</title>
+  </head>
+
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <img class="header--logo" src="img/logoAlura.png" alt="" srcset="">
+      </header>
+      <main class="mainContent">
+        <section class="mainContent--content">
+          <textarea name="sourceTextArea" id="sourceTextArea" cols="3" rows="5" placeholder="Digite seu texto"></textarea>
+          <section class="mainContent--content-footer">
+            <div class="mainContent--content-footer-caption">
+              <img class="sinaldeatencao" src="img/atencaoAlura.png" alt="">
+              <p id="msgResult">Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="mainContent--content-footer-buttons">
+              <button id="encriptButton" class="activedButton">
+                Criptografar
+              </button>
+              <button id="decriptButton">Descriptografar</button>
+            </div>
+          </section>
+        </section>
+        <aside class="mainContent--aside">
+          <textarea name="targetTextArea" id="targetTextArea" cols="30" rows="8" readonly="" style="display: none;"></textarea>
+          <img id="asideImg" class="mainContent--aside-img" src="img/meninoAlura.png" alt="" srcset="">
+          <div id="textElements" class="mainContent--aside-caption">
+            <h2>Nenhuma mensagem encontrada</h2>
+            <p>
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </p>
+          </div>
+          <button id="copyButton" style="display: none;">Copiar</button>
+        </aside>
+      </main>
+      <footer class="footer">Desenvolvido por Jean Confertino 
+        <br>
+        <p class="footer_linkedIn">
+          <a href="https://www.linkedin.com/in/jean-confertino-004958217/" class="logoLinkedIn"><img src="img/logoLinkedIn.png" alt="Logo LinkedIn"></a>
+        </p>
+      </footer>
+    </div>
+    <script src="js/script.js" defer=""></script>
+</body>
